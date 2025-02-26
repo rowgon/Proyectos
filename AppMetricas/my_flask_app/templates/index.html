@@ -1,0 +1,44 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="loading-container" class="container">
+        <div>
+            <h1>Generador de Dashboard</h1>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".csv" required>
+                <button type="submit">Cargar y Analizar</button>
+            </form>
+            <div id="loading-text" style="display: none;">Cargando archivo...</div>
+            <div class="progress-bar" id="progress-bar" style="display: none;">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector("form").onsubmit = function() {
+            document.getElementById("loading-text").style.display = "block";
+            document.getElementById("progress-bar").style.display = "block";
+
+            // Simulación de progreso de carga
+            let progressBarFill = document.getElementById("progress-bar-fill");
+            let width = 0;
+            let interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width += 10;
+                    progressBarFill.style.width = width + '%';
+                }
+            }, 300);
+        };
+    </script>
+</body>
+</html>

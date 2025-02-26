@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Contacto</title>
+</head>
+<body>
+    <h2>Contáctame</h2>
+    <form action="{{ url_for('contacto') }}" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <a href="{{ url_for('index') }}" class="btn-volver">Volver al inicio</a>
+
+    <footer>
+        <p>&copy; 2024 - Mi Portafolio Espacial</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h2>Mi Portafolio</h2>
+        <a href="{{ url_for('contact') }}" class="btn-contact">Contacto</a>
+        <a href="{{ url_for('login') }}" class="btn-login">Login</a>
+    </header>
+    <div class="proyectos">
+        {% for project in projects %}
+        <div class="proyecto-contenedor">
+            <h3>{{ project[1] }}</h3>
+            <img src="{{ url_for('static', filename=project[2]) }}" alt="Proyecto">
+            <p>{{ project[3] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <footer>© 2023 Mi Portafolio</footer>
+</body>
+</html>

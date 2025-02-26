@@ -1,0 +1,114 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+header h2, footer {
+    margin: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Forms */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+form input[type="text"], form input[type="password"], form input[type="email"], form input[type="url"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Projects and Messages */
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.proyecto-contenedor, .message-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.proyecto-contenedor:hover {
+    transform: translateY(-5px);
+}
+.message-item {
+    margin-bottom: 15px;
+}
+.message-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .proyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+}

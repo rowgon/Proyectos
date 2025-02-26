@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <h2>Contacto</h2>
+        <a href="{{ url_for('index') }}" class="btn-secondary">Volver al Inicio</a>
+    </header>
+    <div class="container">
+        <h3>Envíanos un mensaje</h3>
+        <form action="{{ url_for('contact') }}" method="POST" class="form-contact">
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea name="message" id="message" rows="4" required></textarea>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+    </div>
+    <footer>© 2023 Mi Portafolio</footer>
+</body>
+</html>

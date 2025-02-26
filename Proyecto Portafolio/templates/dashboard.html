@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <h2>Panel de Administración</h2>
+        <a href="{{ url_for('logout') }}" class="btn-secondary">Cerrar Sesión</a>
+    </header>
+    <div class="container">
+        <h3>Agregar Proyecto</h3>
+        <form action="{{ url_for('add_project') }}" method="POST" class="form-add">
+            <label for="project_url">URL del Proyecto:</label>
+            <input type="url" name="project_url" id="project_url" placeholder="https://ejemplo.com" required>
+            <button type="submit" class="btn-primary">Agregar Proyecto</button>
+        </form>
+    </div>
+    <footer>© 2023 Mi Portafolio</footer>
+</body>
+</html>

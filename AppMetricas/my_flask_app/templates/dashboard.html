@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container2">
+        <h1>Dashboard</h1>
+        <div class="graphs">
+            {% for graph in graphs %}
+                <div class="graph">
+                    <img src="{{ url_for('static', filename=graph) }}" alt="Graph" style="width: 100%;">
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('index') }}"><button>Volver a Subir</button></a>
+    </div>
+</body>
+</html>

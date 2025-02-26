@@ -1,0 +1,194 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../images/fondo_espacial.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Contenedor Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #fff; /* Títulos en blanco */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Proyectos */
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.proyecto-contenedor {
+    flex: 0 0 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.proyecto-contenedor:hover {
+    transform: scale(1.05);
+}
+
+.proyecto-contenedor h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.proyecto-contenedor img.img-proyecto {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.proyecto-contenedor p {
+    margin-bottom: 15px;
+}
+
+.proyecto-contenedor a.btn-ver-proyecto {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.proyecto-contenedor a.btn-ver-proyecto:hover {
+    transform: scale(1.1);
+    background-color: #87cefa;
+}
+
+/* Botones generales */
+.btn-ver-mensajes, .btn-volver, .btn-contacto {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-ver-mensajes:hover, .btn-volver:hover, .btn-contacto:hover {
+    transform: scale(1.1); /* Efecto de zoom en hover */
+    background-color: #87cefa; /* Cambio a azul más claro */
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1); /* Efecto de zoom en hover */
+    background-color: #87cefa; /* Cambio a azul más claro */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .proyecto-contenedor {
+        flex: 0 0 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .proyecto-contenedor {
+        flex: 0 0 100%;
+    }
+
+    input, textarea {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .proyecto-contenedor {
+        flex: 0 0 100%;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    a.btn-ver-proyecto, .btn-volver, .btn-contacto, .btn-ver-mensajes {
+        padding: 8px 16px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}

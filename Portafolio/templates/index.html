@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Mis Proyectos</title>
+</head>
+<body>
+    <h2>Mis Proyectos</h2>
+    <section class="proyectos">
+        <div class="proyecto-contenedor">
+            <h3>Sitio 1</h3>
+            <img src="{{ url_for('static', filename='images/capture1.webp') }}" alt="Captura de Sitio 1" class="img-proyecto">
+            <p>Descripción del sitio 1</p>
+            <a href="#" class="btn-ver-proyecto">Ver más</a>
+        </div>
+        <div class="proyecto-contenedor">
+            <h3>Sitio 2</h3>
+            <img src="{{ url_for('static', filename='images/capture2.webp') }}" alt="Captura de Sitio 2" class="img-proyecto">
+            <p>Descripción del sitio 2</p>
+            <a href="#" class="btn-ver-proyecto">Ver más</a>
+        </div>
+        <div class="proyecto-contenedor">
+            <h3>Sitio 3</h3>
+            <img src="{{ url_for('static', filename='images/capture2.webp') }}" alt="Captura de Sitio 3" class="img-proyecto">
+            <p>Descripción del sitio 3</p>
+            <a href="#" class="btn-ver-proyecto">Ver más</a>
+        </div>
+    </section>
+    <section class="proyectos">
+        <div class="proyecto-contenedor">
+            <h3>Sitio 1</h3>
+            <img src="{{ url_for('static', filename='images/capture1.webp') }}" alt="Captura de Sitio 1" class="img-proyecto">
+            <p>Descripción del sitio 1</p>
+            <a href="#" class="btn-ver-proyecto">Ver más</a>
+        </div>
+        <div class="proyecto-contenedor">
+            <h3>Sitio 2</h3>
+            <img src="{{ url_for('static', filename='images/capture2.webp') }}" alt="Captura de Sitio 2" class="img-proyecto">
+            <p>Descripción del sitio 2</p>
+            <a href="#" class="btn-ver-proyecto">Ver más</a>
+        </div>
+        <div class="proyecto-contenedor">
+            <h3>Sitio 3</h3>
+            <img src="{{ url_for('static', filename='images/capture2.webp') }}" alt="Captura de Sitio 3" class="img-proyecto">
+            <p>Descripción del sitio 3</p>
+            <a href="#" class="btn-ver-proyecto">Ver más</a>
+        </div>
+    </section>
+
+    <a href="{{ url_for('contacto') }}" class="btn-contacto">Contacto</a>
+    <a href="{{ url_for('login') }}" class="btn-ver-mensajes">Ver Mensajes</a>
+
+    <footer>
+        <p>&copy; 2024 - Mi Portafolio Espacial</p>
+    </footer>
+</body>
+</html>
