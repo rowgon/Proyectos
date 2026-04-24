@@ -1,0 +1,4 @@
+{
+  "/api/pdf/route": "app/api/pdf/route.js",
+  "/page": "app/page.js"
+}
